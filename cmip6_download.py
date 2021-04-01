@@ -22,7 +22,7 @@ def download_file(url_to_download, variable_name, index):
     if not os.path.isfile(outpath+variable_name+'/'+url_to_download.split('/')[-1]):
         #print('\t Downloading file [' + str(index) + '/' + str(len(files_to_download)) +'] ' + url_to_download)
         for currentRun in range(0, 1):
-            result_code = os.system('wget -nc -c --quiet -o /dev/null -P ' + outpath+variable_name + ' ' + url_to_download )
+            result_code = os.system('/urs/local/bin/wget -nc -c --quiet -o /dev/null -P ' + outpath+variable_name + ' ' + url_to_download )
             if result_code == 0:
                 break
 
